@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Christmas Crossword</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c3f1d, #1a5a32);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #aaddff;
+            margin-bottom: 25px;
+        }
+        .crossword {
+            display: inline-block;
+            margin: 20px auto;
+            background: #0e4a2a;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 220, 100, 0.5);
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ffcc00;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: #fff;
+            color: #222;
+            position: relative;
+        }
+        .black {
+            background-color: #092f17;
+            border-color: #062010;
+        }
+        .number {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 10px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .legend {
+            max-width: 600px;
+            margin: 25px auto;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .legend h2 {
+            color: #ffcc00;
+            margin-top: 0;
+        }
+        .clue {
+            margin: 10px 0;
+        }
+        .num {
+            display: inline-block;
+            width: 24px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎅 Christmas Crossword 🎁</h1>
+    <p class="subtitle">Can you solve it? Words: <em>Christmas, gayety, Gifts, Christmas tree, Santa</em></p>
+
+    <div class="crossword">
+        <table>
+            <!-- Row 1 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">1</span>C</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>h</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td>r</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+                <td class="black"></td><td><span class="number">2</span>G</td><td>a</td><td>y</td><td>i</td><td>e</td><td>t</td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+                <td class="black"></td><td>i</td><td class="black"></td><td class="black"></td><td>s</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 6 -->
+            <tr>
+                <td><span class="number">3</span>S</td><td>f</td><td class="black"></td><td class="black"></td><td>t</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 7 -->
+            <tr>
+                <td>a</td><td>t</td><td class="black"></td><td class="black"></td><td>m</td><td class="black"></td><td class="black"></td>
+            </tr>
+            <!-- Row 8 -->
+            <tr>
+                <td>n</td><td>s</td><td><span class="number">4</span>C</td><td>h</td><td>a</td><td>r</td><td>i</td>
+            </tr>
+            <!-- Row 9 -->
+            <tr>
+                <td>t</td><td class="black"></td><td>r</td><td>i</td><td>s</td><td>t</td><td>m</td>
+            </tr>
+            <!-- Row 10 -->
+            <tr>
+                <td>a</td><td class="black"></td><td>i</td><td>s</td><td>t</td><td>m</td><td>a</td>
+            </tr>
+            <!-- Row 11 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td>s</td><td>t</td><td>r</td><td>e</td><td>e</td>
+            </tr>
+            <!-- Row 12 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td class="black"></td><td><span class="number">5</span>S</td><td>a</td><td>n</td><td>t</td>
+            </tr>
+            <!-- Row 13 -->
+            <tr>
+                <td class="black"></td><td class="black"></td><td class="black"></td><td>a</td><td class="black"></td><td class="black"></td><td class="black"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="legend">
+        <h2>Clues</h2>
+        <div class="clue"><span class="num">1.</span> The main winter holiday (9 letters)</div>
+        <div class="clue"><span class="num">2.</span> Joy, merriment, festive spirit (6 letters — archaic form of "gaiety")</div>
+        <div class="clue"><span class="num">3.</span> Presents under the tree (5 letters)</div>
+        <div class="clue"><span class="num">4.</span> Decorated evergreen — two words as one: <em>Christmastree</em> (13 letters)</div>
+        <div class="clue"><span class="num">5.</span> Jolly man in red suit who brings gifts (5 letters)</div>
+    </div>
+
+    <footer>
+        ✨ Merry Christmas and Happy New Year! May your holidays be full of joy, love, and <em>gayety</em>! ✨
+    </footer>
+</body>
+</html>
