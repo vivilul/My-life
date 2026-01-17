@@ -2,177 +2,102 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Из чего состоит доменное имя моего сайта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой блог</title>
   <style>
     body {
-      
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Решение шифров Цезаря</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px;
-      background-color: #f9f9f9;
+      padding: 20px;
+      background-color: #ffe6f0; /* Розовый фон */
       color: #333;
     }
     h1, h2 {
-      color: #2c3e50;
+      color: #c2185b;
     }
-    .task {
-      margin-bottom: 25px;
-      padding: 15px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .answer {
-      font-weight: bold;
-      color: #27ae60;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #7f8c8d;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
-  <h1>Решение задач по шифру Цезаря</h1>
-  <p><strong>Дата:</strong> 17 января 2026 года</p>
-
-  <div class="task">
-    <h2>1. Определение ключей шифра Цезаря</h2>
-    <p><strong>а.</strong> Открытый текст: АПЕЛЬСИН → Шифротекст: САЦЬНВЩЮ<br>
-       <span class="answer">Ключ: k = 17</span></p>
-    <p><strong>б.</strong> Открытый текст: АБРИКОС → Шифротекст: ЫЬЛГЕЙМ<br>
-       <span class="answer">Ключ: k = 27</span></p>
-  </div>
-
-  <div class="task">
-    <h2>2. Расшифровка сообщений</h2>
-    <p><strong>а.</strong> Шифротекст: ФХНЗКЧ<br>
-       <span class="answer">Расшифровка: ПРИВЕТ (ключ k = 5)</span></p>
-    <p><strong>б.</strong> Шифротекст: ЦЩЕБФ<br>
-       <span class="answer">Расшифровка: ВЕСНА (ключ k = 20)</span></p>
-  </div>
-
-  <div class="task">
-    <h2>3. Шифрование фамилии</h2>
-    <p>Фамилия: <strong>Трещалова</strong>, ключ: <strong>k = 10</strong><br>
-       <span class="answer">Шифротекст: ЬЪПГКХШМК</span></p>
-  </div>
-
-  <footer>
-    Решено и опубликовано на GitHub • 17 января 2026 г.
-  </footer>
-</body>
-
-
-
-      
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #333;
-      background-color: #fff;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .date {
-      color: #7f8c8d;
+    blockquote {
       font-style: italic;
-      margin-bottom: 24px;
+      margin: 16px 0;
+      padding-left: 16px;
+      border-left: 4px solid #f06292;
     }
     a {
-      color: #3498db;
-      text-decoration: none;
+      color: #ad1457;
+      text-decoration: underline;
     }
     a:hover {
-      text-decoration: underline;
+      color: #880e4f;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    video {
+      margin: 10px 0;
+    }
+    .post {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed #f8bbd0;
     }
   </style>
 </head>
 <body>
-  <h1>Из чего состоит доменное имя моего сайта</h1>
-  
-  <div class="date">Опубликовано: 12 января 2026 г.</div>
 
-  <p>
-    Когда мы заходим на любой сайт, его адрес — это не просто строка, а иерархическая структура, построенная по правилам DNS. Давайте разберём, из каких частей состоит доменное имя.
-  </p>
+  <h1>Добро пожаловать в мой блог!</h1>
 
-  <p>
-    Доменные имена читаются <strong>справа налево</strong>, от самого общего уровня к самому конкретному:
-  </p>
+  <!-- Запись от 3 декабря 2025 -->
+  <div class="post">
+    <h2>3 декабря, 2025</h2>
+    <img src="Icons/gingerbread.png" alt="Имбирный пряник" title="Имбирный пряник от Flaticon (Pixelmeetup)" />
+    <p>Поздравление с Наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь</a>.</p>
+  </div>
 
-  <ol>
-    <li><strong>Корневой домен</strong> (<code>.</code>) — технически присутствует в конце любого домена, но обычно скрыт.</li>
-    <li><strong>Домен верхнего уровня (TLD)</strong> — например, <code>.com</code>, <code>.org</code>, <code>.ru</code>.</li>
-    <li><strong>Домен второго уровня</strong> — основное имя сайта (например, <code>github</code> в <code>github.com</code>).</li>
-    <li><strong>Поддомены</strong> — дополнительные уровни слева (например, <code>pages.github.com</code>).</li>
-  </ol>
+  <!-- Запись от 15 декабря 2025 -->
+  <div class="post">
+    <h2>15 декабря, 2025</h2>
+    <p>Поздравление с Наступающим 2026 годом читайте <a href="ura.odt">здесь</a>.</p>
+    <video controls width="400">
+      <source src="newTree.mp4" type="video/mp4" />
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
 
-  <p>
-    Если у вас есть собственный сайт, вы можете точно так же разложить его домен на составляющие и понять, как он устроен внутри глобальной системы имён.
-  </p>
+  <!-- Запись от 26 ноября 2025 -->
+  <div class="post">
+    <h2>26 ноября, 2025</h2>
+    <p>
+      Я сделала Новогодние кроссворды для сайта 
+      <a href="http://адрес-сайта-друга" title="Блог моего друга">Сайт моего друга</a>.
+    </p>
+  </div>
 
-  <p>
-    Хотите обсудить или задать вопрос?  
-    <a href="mailto:officialvivi69@gmail.com">Напишите мне</a>.
-  </p>
-</body>
+  <!-- Запись от 1 сентября 2025 -->
+  <div class="post">
+    <h2>1 сентября, 2025</h2>
+    <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
+    <p>Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.</p>
+  </div>
 
-    <head> 
-    <title>Мой блог</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <blockquote class"q">Путишествие в тысячу миль начинается с одного шага (Лао Цзы) </blockquote>
-    
-    <h2> 15 декабря, 2025</h2>
+  <!-- Дополнительная запись (PDF) -->
+  <div class="post">
+    <h2>Документы</h2>
+    <p>Здесь вы можете ознакомиться с документом:</p>
+    <p>
+      <a href="pudelinka.pdf" target="_blank">Открыть "Pudelinka" (PDF)</a> 
+      или 
+      <a href="pudelinka.pdf" download>Скачать</a>
+    </p>
+  </div>
 
-  <p>Поздравление с Наступающим 2026 годом читайте <a href="ura.odt"> здесь.</a> </p> 
-    <vidio controls width="400">
-        <source src="newTree.mp4" type"video/mp4">
-        Ваш браузер не поддерживает видео.
-        <\video>
+  <!-- Контакт -->
+  <footer style="margin-top: 40px; text-align: center; color: #880e4f;">
+    <p>Хотите обсудить или задать вопрос? <a href="mailto:officialvivi69@gmail.com">Напишите мне</a>.</p>
+  </footer>
 
-            
-   <h2> 26 ноября, 2025</h2>
-<p>
-Я сделала Новогодние кроссворды для сайта <a href=“http://адрес сайта друга”  title=“Блог моего друга”Сайт моего друга</a>
-</p>
-           <h2> 1 сентября , 2025</h2>
-<blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы) </blockquote>
-<p>
-Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.
-</p> 
-     <h2> 3 декабря, 2025</h2>
-<img src=“Icons/<a href="https://www.flaticon.com/ru/free-icons/-" title="имбирный пряник иконки">Имбирный пряник иконки от Pixelmeetup - Flaticon</a> alt=“Новый год”>
-Поздравление с Наступающим 2026 годом читайте <a href=“Congratulations2026.html”> здесь.</a>
-       
-            <img src=“Icons/<a href="https://www.flaticon.com/ru/free-icons/-" title="имбирный пряник иконки">Имбирный пряник иконки от Pixelmeetup - Flaticon</a> alt=“Новый год”>
-Поздравление с Наступающим 2026 годом читайте <a href=“Congratulations2026.html”> здесь.</a>
-        </body>
-        </html>
-            <h2> 15 декабря, 2025</h2>
-            <meta charset="utf-8">
-            <title>Моя страница</title>
-        </head>
-            <h1>Добро пожаловать!</h1>
-            <p>Здесь вы можете ознакомиться с документом:</p>
-            <a href="pudelinka.pdf" target="_blank"> Открыть "Pudelinka" (PDF)</a>
-            <!-- или -->
-            <a href="pudelinka.pdf" download> Скачать</a>
 </body>
 </html>
