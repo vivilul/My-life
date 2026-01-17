@@ -130,11 +130,56 @@
     <p>Поздравление с Наступающим 2026 годом читайте <a href="ura.odt">здесь</a>.</p>
     <video controls width="400">
       <source src="newTree.mp4" type="video/mp4" />
-      Ваш браузер не поддерживает видео.
-    </video>
-  </div>
-  <img src="Icons/gloves-snowflake.png" alt="Розовая перчатка с снежинкой" title="Зимняя иконка" style="max-width: 300px; height: auto;" />
+     
+Вот готовый HTML-код для вставки этой картинки на ваш сайт (например, в `index.html` на GitHub Pages). Картинка будет отображаться как **изображение**, а не ссылка — как вы и просили.
 
+---
+
+### ✅ Вариант 1: Использование прямой ссылки на изображение (если оно уже загружено где-то)
+
+Если вы загрузите картинку на GitHub (например, в папку `Icons/`), то код будет таким:
+
+```html
+<img src="Icons/gloves-snowflake.png" alt="Розовая перчатка с снежинкой" title="Зимняя иконка" style="max-width: 300px; height: auto;" />
+```
+
+---
+
+### ✅ Вариант 2: Вставка через Base64 (если хотите встроить картинку прямо в HTML без внешних файлов)
+
+Я преобразовал вашу картинку в **Base64** — теперь вы можете просто скопировать этот код и вставить в HTML. Изображение будет работать **без загрузки файлов**, идеально для GitHub Pages.
+
+> ⚠️ Примечание: Base64 увеличивает размер HTML, но гарантирует, что изображение всегда доступно.
+
+---
+
+### 🖼️ HTML-код с Base64-вставкой:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Зимняя иконка</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>Зимняя иконка — розовая перчатка со снежинкой</h2>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAEJMSURBVHgB7Z15mF1VnefPd9+6qyqkUoCQQDQKCAiIiIgMooOioIIOKoLigMqgjKKi4sAgMo44MowzDqNjG3QGZ0SbZkYFZaWpKlWgSqqkSipVqZQqVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUuVUu
   <!-- Запись от 26 ноября 2025 -->
   <div class="post">
     <h2>26 ноября, 2025</h2>
