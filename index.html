@@ -1,91 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Решение шифров Цезаря</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой сайт: Шифры, Домены и Блог</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      background-color: #f9f9f9;
+      background-color: #f5f9ff; /* Светло-голубой фон для всего сайта */
       color: #333;
     }
-    h1, h2 {
-      color: #2c3e50;
+    h1, h2, h3 {
+      color: #0d47a1;
+    }
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .task {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       padding: 15px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #f8f9fa;
+      border-left: 4px solid #4caf50;
+      border-radius: 0 6px 6px 0;
     }
     .answer {
       font-weight: bold;
-      color: #27ae60;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #7f8c8d;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
-  <h1>Решение задач по шифру Цезаря</h1>
-  <p><strong>Дата:</strong> 17 января 2026 года</p>
-
-  <div class="task">
-    <h2>1. Определение ключей шифра Цезаря</h2>
-    <p><strong>а.</strong> Открытый текст: АПЕЛЬСИН → Шифротекст: САЦЬНВЩЮ<br>
-       <span class="answer">Ключ: k = 17</span></p>
-    <p><strong>б.</strong> Открытый текст: АБРИКОС → Шифротекст: ЫЬЛГЕЙМ<br>
-       <span class="answer">Ключ: k = 27</span></p>
-  </div>
-
-  <div class="task">
-    <h2>2. Расшифровка сообщений</h2>
-    <p><strong>а.</strong> Шифротекст: ФХНЗКЧ<br>
-       <span class="answer">Расшифровка: ПРИВЕТ (ключ k = 5)</span></p>
-    <p><strong>б.</strong> Шифротекст: ЦЩЕБФ<br>
-       <span class="answer">Расшифровка: ВЕСНА (ключ k = 20)</span></p>
-  </div>
-
-  <div class="task">
-    <h2>3. Шифрование фамилии</h2>
-    <p>Фамилия: <strong>Трещалова</strong>, ключ: <strong>k = 10</strong><br>
-       <span class="answer">Шифротекст: ЬЪПГКХШМК</span></p>
-  </div>
-
-  <footer>
-    Решено и опубликовано на GitHub • 17 января 2026 г.
-  </footer>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Что такое домен?</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
+      color: #2e7d32;
     }
     .highlight {
       background-color: #e3f2fd;
@@ -93,10 +41,37 @@
       border-radius: 4px;
       font-weight: bold;
     }
+    blockquote {
+      font-style: italic;
+      margin: 16px 0;
+      padding-left: 16px;
+      border-left: 4px solid #90caf9;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #0d47a1;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    video {
+      margin: 10px 0;
+    }
+    .post {
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed #bbdefb;
+    }
     footer {
       margin-top: 40px;
       text-align: center;
-      color: #7f8c8d;
+      color: #546e7a;
       font-size: 0.9em;
     }
     code {
@@ -109,157 +84,119 @@
 </head>
 <body>
 
-  <h1>Что такое домен?</h1>
+  <!-- Раздел 1: Шифр Цезаря -->
+  <div class="section">
+    <h1>Решение задач по шифру Цезаря</h1>
+    <p><strong>Дата:</strong> 17 января 2026 года</p>
 
-  <p>
-    <strong>Домен</strong> — это уникальное имя сайта в интернете, которое заменяет сложный числовой IP-адрес.
-    Например, вместо того чтобы запоминать <code>142.250.189.206</code>, вы просто вводите <code class="highlight">google.com</code>.
-  </p>
+    <div class="task">
+      <h2>1. Определение ключей шифра Цезаря</h2>
+      <p><strong>а.</strong> Открытый текст: АПЕЛЬСИН → Шифротекст: САЦЬНВЩЮ<br>
+         <span class="answer">Ключ: k = 17</span></p>
+      <p><strong>б.</strong> Открытый текст: АБРИКОС → Шифротекст: ЫЬЛГЕЙМ<br>
+         <span class="answer">Ключ: k = 27</span></p>
+    </div>
 
-  <h2>Структура доменного имени</h2>
-  <p>
-    Домен состоит из нескольких частей:
-  </p>
-  <ul>
-    <li><strong>Поддомен</strong> (необязательный): например, <code>www</code> в <code>www.example.com</code></li>
-    <li><strong>Домен второго уровня</strong>: основное имя, например, <code>example</code></li>
-    <li><strong>Домен верхнего уровня (TLD)</strong>: расширение, например, <code>.com</code>, <code>.ru</code>, <code>.org</code></li>
-  </ul>
+    <div class="task">
+      <h2>2. Расшифровка сообщений</h2>
+      <p><strong>а.</strong> Шифротекст: ФХНЗКЧ<br>
+         <span class="answer">Расшифровка: ПРИВЕТ (ключ k = 5)</span></p>
+      <p><strong>б.</strong> Шифротекст: ЦЩЕБФ<br>
+         <span class="answer">Расшифровка: ВЕСНА (ключ k = 20)</span></p>
+    </div>
 
-  <h2>Примеры доменов</h2>
-  <ul>
-    <li><code class="highlight">yandex.ru</code> — российский поисковик</li>
-    <li><code class="highlight">wikipedia.org</code> — международная энциклопедия</li>
-    <li><code class="highlight">github.io</code> — платформа для хостинга сайтов</li>
-  </ul>
-
-  <h2>Как зарегистрировать домен?</h2>
-  <p>
-    Чтобы получить свой домен, нужно:
-  </p>
-  <ol>
-    <li>Выбрать свободное имя (например, <code>myblog</code>)</li>
-    <li>Выбрать зону (например, <code>.ru</code> или <code>.com</code>)</li>
-    <li>Зарегистрировать его через <strong>регистратора доменов</strong> (например, Reg.ru, GoDaddy, Namecheap)</li>
-    <li>Оплатить годовое использование</li>
-  </ol>
-
-  <p>
-    После регистрации вы сможете привязать домен к своему хостингу и запустить сайт!
-  </p>
-
-  <footer>
-    &copy; 2026 • Информационная страница о доменах
-  </footer>
-
-</body>
-</html>
-
-
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Мой блог</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #ffe6f0; /* Розовый фон */
-      color: #333;
-    }
-    h1, h2 {
-      color: #c2185b;
-    }
-    blockquote {
-      font-style: italic;
-      margin: 16px 0;
-      padding-left: 16px;
-      border-left: 4px solid #f06292;
-    }
-    a {
-      color: #ad1457;
-      text-decoration: underline;
-    }
-    a:hover {
-      color: #880e4f;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    video {
-      margin: 10px 0;
-    }
-    .post {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px dashed #f8bbd0;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Добро пожаловать в мой блог!</h1>
-
-  <!-- Запись от 3 декабря 2025 -->
-  <div class="post">
-    <h2>3 декабря, 2025</h2>
-   
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
-</head>
-<body>
-  <h1>Добро пожаловать на мой сайт!</h1>
-  <img src="https://raw.githubusercontent.com/username/repository-name/main/images/image.png" alt="Описание изображения" style="max-width: 100%; height: auto;">
-</body>
-
-    <p>Поздравление с наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь</a>.</p>
+    <div class="task">
+      <h2>3. Шифрование фамилии</h2>
+      <p>Фамилия: <strong>Трещалова</strong>, ключ: <strong>k = 10</strong><br>
+         <span class="answer">Шифротекст: ЬЪПГКХШМК</span></p>
+    </div>
   </div>
 
-  <!-- Запись от 15 декабря 2025 -->
-  <div class="post">
-    <h2>15 декабря, 2025</h2>
-    <p>Поздравление с наступающим 2026 годом читайте <a href="ura.odt">здесь</a>.</p>
-    <video controls width="400">
-      <source src="newTree.mp4" type="video/mp4" />
-      Ваш браузер не поддерживает элемент <video>, попробуйте обновить версию браузера.
-    </video>
-  </div>
+  <!-- Раздел 2: Что такое домен -->
+  <div class="section">
+    <h1>Что такое домен?</h1>
 
-  <!-- Запись от 26 ноября 2025 -->
-  <div class="post">
-    <h2>26 ноября, 2025</h2>
-    <p>Я создала новогодние кроссворды для сайта <a href="http://адрес-сайта-друга/" title="Блог моего друга">моего друга</a>.</p>
-  </div>
-
-  <!-- Запись от 1 сентября 2025 -->
-  <div class="post">
-    <h2>1 сентября, 2025</h2>
-    <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
-    <p>Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.</p>
-  </div>
-
-  <!-- Дополнительная запись (PDF) -->
-  <div class="post">
-    <h2>Документы</h2>
-    <p>Здесь вы можете ознакомиться с документом:</p>
     <p>
-      <a href="pudelinka.pdf" target="_blank">Открыть "Pudelinka" (PDF)</a> 
-      или 
-      <a href="pudelinka.pdf" download>Скачать</a>
+      <strong>Домен</strong> — это уникальное имя сайта в интернете, которое заменяет сложный числовой IP-адрес.
+      Например, вместо того чтобы запоминать <code>142.250.189.206</code>, вы просто вводите <code class="highlight">google.com</code>.
     </p>
+
+    <h2>Структура доменного имени</h2>
+    <p>Домен состоит из нескольких частей:</p>
+    <ul>
+      <li><strong>Поддомен</strong> (необязательный): например, <code>www</code> в <code>www.example.com</code></li>
+      <li><strong>Домен второго уровня</strong>: основное имя, например, <code>example</code></li>
+      <li><strong>Домен верхнего уровня (TLD)</strong>: расширение, например, <code>.com</code>, <code>.ru</code>, <code>.org</code></li>
+    </ul>
+
+    <h2>Примеры доменов</h2>
+    <ul>
+      <li><code class="highlight">yandex.ru</code> — российский поисковик</li>
+      <li><code class="highlight">wikipedia.org</code> — международная энциклопедия</li>
+      <li><code class="highlight">github.io</code> — платформа для хостинга сайтов</li>
+    </ul>
+
+    <h2>Как зарегистрировать домен?</h2>
+    <p>Чтобы получить свой домен, нужно:</p>
+    <ol>
+      <li>Выбрать свободное имя (например, <code>myblog</code>)</li>
+      <li>Выбрать зону (например, <code>.ru</code> или <code>.com</code>)</li>
+      <li>Зарегистрировать его через <strong>регистратора доменов</strong> (например, Reg.ru, GoDaddy, Namecheap)</li>
+      <li>Оплатить годовое использование</li>
+    </ol>
+
+    <p>После регистрации вы сможете привязать домен к своему хостингу и запустить сайт!</p>
   </div>
 
-  <!-- Контакт -->
-  <footer style="margin-top: 40px; text-align: center; color: #880e4f;">
+  <!-- Раздел 3: Блог -->
+  <div class="section">
+    <h1>Добро пожаловать в мой блог!</h1>
+
+    <!-- Запись от 3 декабря 2025 -->
+    <div class="post">
+      <h2>3 декабря, 2025</h2>
+      <img src="https://raw.githubusercontent.com/username/repository-name/main/images/image.png" alt="Изображение из блога" style="max-width: 100%; height: auto;">
+      <p>Поздравление с наступающим 2026 годом читайте <a href="Congratulations2026.html" target="_blank">здесь</a>.</p>
+    </div>
+
+    <!-- Запись от 15 декабря 2025 -->
+    <div class="post">
+      <h2>15 декабря, 2025</h2>
+      <p>Поздравление с наступающим 2026 годом читайте <a href="ura.odt" target="_blank">здесь</a>.</p>
+      <video controls width="400">
+        <source src="newTree.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает элемент &lt;video&gt;.
+      </video>
+    </div>
+
+    <!-- Запись от 26 ноября 2025 -->
+    <div class="post">
+      <h2>26 ноября, 2025</h2>
+      <p>Я создала новогодние кроссворды для сайта <a href="http://example.com" title="Блог моего друга" target="_blank">моего друга</a>.</p>
+    </div>
+
+    <!-- Запись от 1 сентября 2025 -->
+    <div class="post">
+      <h2>1 сентября, 2025</h2>
+      <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
+      <p>Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.</p>
+    </div>
+
+    <!-- Документы -->
+    <div class="post">
+      <h2>Документы</h2>
+      <p>
+        <a href="pudelinka.pdf" target="_blank">Открыть "Pudelinka" (PDF)</a> 
+        или 
+        <a href="pudelinka.pdf" download>Скачать</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Общий футер -->
+  <footer>
     <p>Хотите обсудить или задать вопрос? <a href="mailto:officialvivi69@gmail.com">Напишите мне</a>.</p>
+    <p>&copy; 2026 • Все материалы опубликованы на GitHub</p>
   </footer>
 
 </body>
