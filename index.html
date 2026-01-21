@@ -1,184 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Учебный пример RSA</title>
+  <title>RSA — Учебный пример</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #f9f9f9;
+      background: #fff;
       color: #333;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    .key-box {
-      background: #eef7ff;
-      border-left: 4px solid #3498db;
-      padding: 12px 16px;
-      margin: 16px 0;
+    h1, h2 { color: #2c3e50; }
+    .key { 
+      background: #f4f4f4; 
+      padding: 12px; 
+      border-radius: 6px; 
       font-family: monospace;
-      white-space: pre-wrap;
+      margin: 10px 0;
       word-break: break-all;
     }
     .warning {
-      background-color: #fff8e1;
+      background: #fff8e1;
+      padding: 12px;
       border-left: 4px solid #ffc107;
-      padding: 12px 16px;
       margin: 20px 0;
-      color: #5d4037;
+      font-size: 0.95em;
     }
-    .success {
-      color: #27ae60;
-      font-weight: bold;
-    }
-    code {
-      background: #f1f1f1;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
+    code { background: #eee; padding: 2px 4px; border-radius: 3px; }
   </style>
 </head>
 <body>
-  <h1>🔐 Учебный пример шифрования RSA</h1>
+  <h1>🔐 Учебный пример RSA</h1>
   
   <p><strong>Дата:</strong> 21 января 2026 г.</p>
 
   <div class="warning">
-    ⚠️ <strong>Внимание!</strong> Этот пример использует очень маленькие числа только для обучения.
-    Настоящие RSA-ключи используют простые числа длиной от 1024 бит и более.
-    <strong>Закрытый ключ никогда не публикуется в открытых репозиториях!</strong>
+    ⚠️ <strong>Внимание!</strong> Настоящие RSA-ключи используют модуль <code>n</code> длиной от 600+ десятичных цифр.
+    Закрытый ключ (<code>d</code>) <strong>никогда не публикуется</strong>.
+    Ниже приведён учебный пример с маленькими числами + фиктивное большое <code>n</code> для демонстрации.
   </div>
 
-  <h2>1. Генерация ключей</h2>
-  <ul>
-    <li>Простые числа: <code>p = 3</code>, <code>q = 5</code></li>
-    <li>Модуль: <code>n = p × q = 15</code></li>
-    <li>Функция Эйлера: <code>φ(n) = (p−1)(q−1) = 8</code></li>
-    <li>Открытая экспонента: <code>e = 3</code> (взаимно простое с 8)</li>
-    <li>Закрытая экспонента: <code>d = 3</code>, так как <code>(3 × 3) mod 8 = 1</code></li>
-  </ul>
+  <h2>Учебные ключи (реальные значения)</h2>
+  <div class="key">Открытый ключ: (n = 15, e = 3)</div>
+  <div class="key">Закрытый ключ: (n = 15, d = 3)</div>
 
-  <h2>2. Ключи</h2>
-  <div class="key-box">
-Открытый ключ: (n = 15, e = 3)
-  </div>
-  <div class="key-box">
-Закрытый ключ: (n = 15, d = 3) — ТОЛЬКО ДЛЯ УЧЕБНОГО ПРИМЕРА!
-  </div>
-
-  <h2>3. Шифрование и расшифровка</h2>
-  <p>Сообщение: <code>m = 2</code> (условие: <code>m &lt; n</code> → ✅)</p>
+  <h2>Пример шифрования</h2>
+  <p>Сообщение: <code>m = 2</code> ("анализ готов")</p>
   <p>Шифрование: <code>C = m<sup>e</sup> mod n = 2<sup>3</sup> mod 15 = 8</code></p>
-  <p>Расшифровка: <code>M = C<sup>d</sup> mod n = 8<sup>3</sup> mod 15 = 512 mod 15 = 2</code> → <span class="success">✅ Восстановлено!</span></p>
+  <p>Расшифровка: <code>M = C<sup>d</sup> mod n = 8<sup>3</sup> mod 15 = 512 mod 15 = 2</code> → ✅</p>
 
-  <h2>4. Как выглядит «реалистичный» модуль n (6000 цифр)</h2>
-  <p>Настоящий RSA-модуль может содержать более 600 десятичных цифр (современный стандарт — 2048–4096 бит).
-  Ниже — <strong>фиктивное</strong> 6000-значное число, сгенерированное случайно (не является произведением двух простых!):</p>
-
-  <div class="key-box" id="fake-n"></div>
+  <h2>Как выглядит реалистичное <code>n</code> (600 десятичных знаков)</h2>
+  <p>Настоящий RSA-модуль — это произведение двух больших простых чисел. Ниже — <strong>случайное 600-значное число</strong> (не настоящее, только для визуала):</p>
+  
+  <div class="key" id="big-n"></div>
 
   <script>
-    // Генерация фиктивного 6000-значного числа (только для визуального эффекта)
-    let n = Math.floor(Math.random() * 9 + 1).toString(); // первая цифра от 1 до 9
-    for (let i = 1; i < 6000; i++) {
+    // Генерация случайного 600-значного числа (начинается с 1-9)
+    let n = Math.floor(Math.random() * 9 + 1).toString(); // первая цифра: 1–9
+    for (let i = 1; i < 600; i++) {
       n += Math.floor(Math.random() * 10);
     }
-    document.getElementById('fake-n').textContent = "n = " + n;
+    document.getElementById('big-n').textContent = "n = " + n;
   </script>
 
-  <hr style="margin-top: 40px; border: 0; border-top: 1px solid #ccc;">
-  <p><em>Этот пример создан исключительно в образовательных целях. Не используйте слабые ключи в реальных системах.</em></p>
+  <hr style="margin-top: 40px; border: 0; border-top: 1px solid #eee;">
+  <p><em>Этот пример создан исключительно в образовательных целях.</em></p>
 </body>
-</html>
-  <title>Мой сайт: Шифры, Домены и Блог</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fff5f7; /* Нежно-розовый фон */
-      color: #333;
-    }
-    h1, h2, h3 {
-      color: #c2185b; /* Насыщенный розовый для заголовков */
-    }
-    .section {
-      margin-bottom: 40px;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(194, 24, 91, 0.08);
-    }
-    .task {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: #fdf2f5;
-      border-left: 4px solid #f48fb1;
-      border-radius: 0 6px 6px 0;
-    }
-    .answer {
-      font-weight: bold;
-      color: #ad1457; /* Тёмно-розовый */
-    }
-    .highlight {
-      background-color: #fce4ec;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      color: #880e4f;
-    }
-    blockquote {
-      font-style: italic;
-      margin: 16px 0;
-      padding-left: 16px;
-      border-left: 4px solid #f06292;
-    }
-    a {
-      color: #ad1457;
-      text-decoration: underline;
-    }
-    a:hover {
-      color: #880e4f;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    video {
-      margin: 10px 0;
-    }
-    .post {
-      margin-bottom: 25px;
-      padding-bottom: 20px;
-      border-bottom: 1px dashed #f8bbd0;
-    }
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      color: #880e4f;
-      font-size: 0.9em;
-    }
-    code {
-      background: #fdf2f5;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-family: monospace;
-      color: #c2185b;
-    }
-  </style>
-</head>
-<body>
+
 
   <!-- Раздел 1: Шифр Цезаря -->
   <div class="section">
